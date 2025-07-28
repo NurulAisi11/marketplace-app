@@ -8,6 +8,44 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
 <style>
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.product-image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.product-price {
+    background-color: #f1f1f1;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 6px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: auto;
+}
+
+
 .product-image-wrapper {
     width: 100%;
     aspect-ratio: 1 / 1;

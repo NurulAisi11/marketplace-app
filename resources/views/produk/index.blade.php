@@ -11,19 +11,27 @@
     </div>
 </div>
 
-<!-- BANNER CAROUSEL -->
-<div id="bannerCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
-    <div class="carousel-inner rounded">
+<!-- Banner Carousel -->
+<div id="brandCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+    <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="https://via.placeholder.com/600x200?text=Aurora+Agency" class="d-block w-100" alt="Banner 1">
+            <img src="{{ asset('images/banner1.jpg') }}" class="d-block w-100 rounded" alt="Banner 1">
         </div>
         <div class="carousel-item">
-            <img src="https://via.placeholder.com/600x200?text=Vintage+Fashion" class="d-block w-100" alt="Banner 2">
+            <img src="{{ asset('images/banner2.jpg') }}" class="d-block w-100 rounded" alt="Banner 2">
         </div>
         <div class="carousel-item">
-            <img src="https://via.placeholder.com/600x200?text=Preloved+Deals" class="d-block w-100" alt="Banner 3">
+            <img src="{{ asset('images/banner3.jpg') }}" class="d-block w-100 rounded" alt="Banner 3">
         </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#brandCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#brandCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
 
 <!-- FILTER -->
