@@ -9,41 +9,76 @@
 
 <style>
 
+
+    .banner-image {
+        height: 160px; /* atau 180px sesuai desain kamu */
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
 .product-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 0.5rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+        width: 160px;
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
 
 .product-image-wrapper {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border-radius: 10px;
-    background-color: #f8f8f8;
-}
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.product-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+
+    .product-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+ .product-name {
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 8px;
+    min-height: 36px; /* untuk membuat teks tetap rata */
+    line-height: 1.2;
 }
 
 .product-price {
-    background-color: #f1f1f1;
-    font-weight: bold;
-    font-size: 14px;
-    padding: 6px;
-    text-align: center;
-    border-radius: 5px;
-    margin-top: auto;
-}
+        font-weight: bold;
+        background-color: #f1f1f1;
+        padding: 6px;
+        font-size: 14px;
+        border-radius: 6px;
+        margin-top: 4px;
+        width: 100%;
+        text-align: center;
+    }
+
+.produk-scroll {
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .produk-scroll > * {
+        scroll-snap-align: start;
+    }
 
 
 .product-image-wrapper {

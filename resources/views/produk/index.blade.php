@@ -15,13 +15,14 @@
 <div id="brandCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="{{ asset('images/banner1.jpg') }}" class="d-block w-100 rounded" alt="Banner 1">
+           <img src="{{ asset('images/banner1.jpg') }}" class="d-block w-100 rounded banner-image" alt="Banner 1">
+
         </div>
         <div class="carousel-item">
-            <img src="{{ asset('images/banner2.jpg') }}" class="d-block w-100 rounded" alt="Banner 2">
+            <img src="{{ asset('images/banner2.jpg') }}" class="d-block w-100 rounded banner-image" alt="Banner 2">
         </div>
         <div class="carousel-item">
-            <img src="{{ asset('images/banner3.jpg') }}" class="d-block w-100 rounded" alt="Banner 3">
+            <img src="{{ asset('images/banner3.jpg') }}" class="d-block w-100 rounded banner-image" alt="Banner 3">
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#brandCarousel" data-bs-slide="prev">
@@ -40,8 +41,8 @@
 </div>
 
 <!-- PRODUK HORIZONTAL SCROLL -->
-<h5 class="fw-bold mb-2">New Product</h5>
-<div class="d-flex overflow-auto gap-3 pb-2" style="scroll-snap-type: x mandatory;">
+<h5 class="fw-bold mb-2">Product</h5>
+<div class="produk-scroll">
     @php
         $produkList = [
             ['nama' => 'Baggy Jeans', 'harga' => 628000, 'gambar' => 'baggy-jeans.jpg'],
@@ -52,13 +53,14 @@
     @endphp
 
     @foreach ($produkList as $produk)
-    <div class="product-card text-center" style="flex: 0 0 150px; scroll-snap-align: start;">
-        <div class="product-image-wrapper mb-2">
-            <img src="{{ asset('storage/produk/' . $produk['gambar']) }}" alt="{{ $produk['nama'] }}" class="product-image">
+        <div class="product-card">
+            <div class="product-image-wrapper">
+
+            </div>
+            <p class="product-name">{{ $produk['nama'] }}</p>
+            <div class="product-price">Rp{{ number_format($produk['harga'], 0, ',', '.') }}</div>
         </div>
-        <p class="mb-1 fw-semibold">{{ $produk['nama'] }}</p>
-        <div class="product-price">Rp{{ number_format($produk['harga'], 0, ',', '.') }}</div>
-    </div>
     @endforeach
 </div>
+
 @endsection
