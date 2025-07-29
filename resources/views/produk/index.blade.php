@@ -35,14 +35,28 @@
     </button>
 </div>
 
-<!-- FILTER -->
-<div class="d-flex justify-content-between align-items-center mb-2">
-    <h5 class="fw-bold">Filters ></h5>
+<!-- FILTER HORIZONTAL SCROLL -->
+<h5 class="fw-bold mb-2">Filters ></h5>
+<div class="d-flex overflow-auto gap-3 pb-2 mb-3" style="scroll-snap-type: x mandatory;">
+    {{-- Filter thumbnails (contoh) --}}
+    <a href="{{ route('produk.index', ['kategori' => 'jaket']) }}" class="flex-shrink-0" style="width: 100px; scroll-snap-align: start;">
+        <img src="{{ asset('images/filter-jaket.jpg') }}" class="img-fluid rounded" alt="Filter Jaket">
+    </a>
+    <a href="{{ route('produk.index', ['kategori' => 'celana']) }}" class="flex-shrink-0" style="width: 100px; scroll-snap-align: start;">
+        <img src="{{ asset('images/filter-celana.jpg') }}" class="img-fluid rounded" alt="Filter Celana">
+    </a>
+    <a href="{{ route('produk.index', ['kategori' => 'sepatu']) }}" class="flex-shrink-0" style="width: 100px; scroll-snap-align: start;">
+        <img src="{{ asset('images/filter-sepatu.jpg') }}" class="img-fluid rounded" alt="Filter Sepatu">
+    </a>
+    <a href="{{ route('produk.index', ['kategori' => 'atasan']) }}" class="flex-shrink-0" style="width: 100px; scroll-snap-align: start;">
+        <img src="{{ asset('images/filter-atasan.jpg') }}" class="img-fluid rounded" alt="Filter Atasan">
+    </a>
+    {{-- Tambah filter lain jika ada --}}
 </div>
 
 <!-- PRODUK HORIZONTAL SCROLL -->
 <h5 class="fw-bold mb-2">Product</h5>
-<div class="produk-scroll">
+<div class="d-flex overflow-auto gap-3 pb-2" style="scroll-snap-type: x mandatory;">
     @php
         $produkList = [
             ['nama' => 'Baggy Jeans', 'harga' => 628000, 'gambar' => 'baggy-jeans.jpg'],
@@ -53,14 +67,13 @@
     @endphp
 
     @foreach ($produkList as $produk)
-        <div class="product-card">
-            <div class="product-image-wrapper">
-
-            </div>
-            <p class="product-name">{{ $produk['nama'] }}</p>
-            <div class="product-price">Rp{{ number_format($produk['harga'], 0, ',', '.') }}</div>
+     <div class="product-card">
+        <div class="product-image-wrapper mb-2">
+            <img src="{{ asset('storage/produk/' . $produk['gambar']) }}" alt="{{ $produk['nama'] }}" class="product-image">
         </div>
+        <p class="mb-1 fw-semibold">{{ $produk['nama'] }}</p>
+        <div class="product-price">Rp{{ number_format($produk['harga'], 0, ',', '.') }}</div>
+    </div>
     @endforeach
 </div>
-
 @endsection

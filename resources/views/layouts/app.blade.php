@@ -9,7 +9,15 @@
 
 <style>
 
+.filter-section {
+        background-color: #d1d1d1;
+        padding: 20px 0;
+    }
 
+    .filter-header {
+        font-weight: bold;
+        font-size: 20px;
+    }
     .banner-image {
         height: 160px; /* atau 180px sesuai desain kamu */
         object-fit: cover;
@@ -109,6 +117,20 @@
     font-size: 14px;
     padding: 2px;
 }
+
+.filter-thumbnail {
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .filter-thumbnail:hover {
+        transform: scale(1.05);
+    }
+
+    
+
 </style>
 
 
@@ -178,9 +200,7 @@
     @yield('content')
 </div>
 
-<footer class="footer">
-    &copy; 2025 Nazt Preloved
-</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
