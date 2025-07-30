@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
+@php
+    use Illuminate\Support\Str;
+@endphp
+
+
 @section('content')
+
 <!-- SEARCH & ICONS -->
 <div class="d-flex justify-content-between align-items-center mb-3">
     <input type="text" class="form-control me-2" placeholder="items and brands" style="max-width: 75%;">
@@ -67,13 +73,19 @@
     @endphp
 
     @foreach ($produkList as $produk)
-     <div class="product-card">
+    @php
+        $slug = Str::slug($produk['nama']);
+    @endphp
+    <div class="product-card">
         <div class="product-image-wrapper mb-2">
             <img src="{{ asset('storage/produk/' . $produk['gambar']) }}" alt="{{ $produk['nama'] }}" class="product-image">
         </div>
         <p class="mb-1 fw-semibold">{{ $produk['nama'] }}</p>
-        <div class="product-price">Rp{{ number_format($produk['harga'], 0, ',', '.') }}</div>
+        <a href="{{ url('/produk/detail/' . $slug) }}" class="text-decoration-none text-dark">
+            <div class="product-price">Rp{{ number_format($produk['harga'], 0, ',', '.') }}</div>
+        </a>
     </div>
+
     @endforeach
 </div>
 @endsection
