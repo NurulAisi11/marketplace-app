@@ -56,3 +56,6 @@ Route::get('/produk/detail/{slug}', function ($slug) {
     return view('produk.detail', ['produk' => $produkList[$slug]]);
 });
 
+Route::get('/keranjang', function () {
+    return view('produk.keranjang');
+})->name('keranjang');

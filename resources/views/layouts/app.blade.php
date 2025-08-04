@@ -10,6 +10,112 @@
 
 <style>
 
+/* === KERANJANG STYLING === */
+.keranjang-container {
+    padding: 20px;
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.keranjang-card {
+    background: #fff;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.keranjang-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.keranjang-content {
+    padding: 20px;
+}
+
+.produk-title {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.produk-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.fitur, .material {
+    flex: 1 1 45%;
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.aksi-button {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-chat, .btn-buy, .btn-cart {
+    flex: 1 1 auto;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-chat {
+    background: #fff;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-buy {
+    background: #fff;
+    border: 2px solid #000;
+}
+
+.btn-cart {
+    background: #000;
+    color: #fff;
+}
+
+.btn-chat:hover, .btn-buy:hover {
+    background: #e0e0e0;
+}
+
+.btn-cart:hover {
+    background: #333;
+}
+
+/* Responsive Mobile */
+@media (max-width: 576px) {
+    .produk-info {
+        flex-direction: column;
+    }
+
+    .aksi-button {
+        flex-direction: column;
+    }
+}
+
 .filter-section {
         background-color: #d1d1d1;
         padding: 20px 0;
