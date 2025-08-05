@@ -63,3 +63,7 @@ Route::get('/keranjang', function () {
 Route::get('/bayar', function () {
     return view('produk.bayar');
 })->name('bayar');
+
+Route::get('/struk', function () {
+    return view('produk.struk');
+})->name('struk');

@@ -10,6 +10,31 @@
 
 <style>
 
+.struk-wrapper {
+    max-width: 480px;
+    margin: auto;
+}
+
+.countdown-box {
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.payment-info {
+    background-color: #fff;
+}
+
+@media (max-width: 576px) {
+    .struk-wrapper p, .struk-wrapper h5 {
+        font-size: 0.95rem;
+    }
+
+    #countdown {
+        font-size: 1.25rem;
+    }
+}
+
+
 .bayar-wrapper {
     max-width: 480px;
     margin: auto;
