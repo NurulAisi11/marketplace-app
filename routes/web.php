@@ -59,3 +59,7 @@ Route::get('/produk/detail/{slug}', function ($slug) {
 Route::get('/keranjang', function () {
     return view('produk.keranjang');
 })->name('keranjang');
+
+Route::get('/bayar', function () {
+    return view('produk.bayar');
+})->name('bayar');

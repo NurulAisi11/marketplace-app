@@ -10,6 +10,49 @@
 
 <style>
 
+.bayar-wrapper {
+    max-width: 480px;
+    margin: auto;
+}
+
+.ticket {
+    background-color: #ffffff;
+    border-radius: 20px;
+    position: relative;
+}
+
+.ticket::before,
+.ticket::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #dcdcdc;
+    border-radius: 50%;
+}
+
+.ticket::before {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ticket::after {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 576px) {
+    .ticket {
+        padding: 1.5rem;
+    }
+    .ticket .text-end {
+        font-size: 0.85rem;
+    }
+}
+
+
 /* === KERANJANG STYLING === */
 .keranjang-container {
     padding: 20px;
