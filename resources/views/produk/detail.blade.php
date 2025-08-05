@@ -26,7 +26,8 @@
 
         <div class="d-flex justify-content-between align-items-center mt-4">
             <h4 class="fw-bold fst-italic text-dark mb-0">Rp{{ number_format($produk['harga'], 0, ',', '.') }}</h4>
-            <a href="#" class="btn btn-dark shadow rounded-pill px-4 py-2 fw-bold">Details</a>
+<a href="{{ route('keranjang') }}" class="btn btn-dark shadow rounded-pill px-4 py-2 fw-bold">Details</a>
+
         </div>
     </div>
 </div>
