@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+
+<div class="container my-4">
+    <a href="{{ url('produk') }}" class="text-decoration-none text-secondary mb-3 d-block">
+        ← Kembali
+    </a>
+
 <div class="keranjang-container">
     <div class="keranjang-card">
         {{-- Gambar Produk --}}
@@ -31,13 +37,11 @@
                 </div>
             </div>
 
-            {{-- Tombol Aksi --}}
-            <div class="aksi-button">
-                <button class="btn-chat"><i class="bi bi-chat-dots"></i></button>
-                <button class="btn-buy">BUY NOW</button>
-                <button class="btn-cart"><i class="bi bi-cart"></i> ADD TO</button>
-            </div>
-        </div>
-    </div>
+          {{-- Tombol Aksi --}}
+<div class="aksi-button d-flex gap-2 mt-3">
+    <button class="btn-chat"><i class="bi bi-chat-dots"></i></button>
+ <a href="{{ route('bayar') }}" class="btn-buy text-decoration-none"> BUY NOW </a>
+    <button class="btn-cart"><i class="bi bi-cart"></i> ADD TO</button>
 </div>
+
 @endsection

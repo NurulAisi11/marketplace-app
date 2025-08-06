@@ -60,7 +60,7 @@
             </label>
         </div>
 
-        <button class="btn btn-dark w-100 fw-bold rounded-pill">BUY NOW</button>
+       <a href="{{ route('struk') }}" <button class="btn btn-dark w-100 fw-bold rounded-pill">BUY NOW</button> </a>
     </div>
 </div>
 @endsection

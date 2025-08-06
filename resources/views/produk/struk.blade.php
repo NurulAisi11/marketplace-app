@@ -48,7 +48,7 @@
     </div>
 
     <!-- Tombol -->
-    <a href="{{ route('struk') }}" class="btn btn-dark w-100 fw-bold rounded-pill py-2">BACK TO HOME</a>
+    <a href="{{ route('produk.index') }}" class="btn btn-dark w-100 fw-bold rounded-pill py-2">BACK TO HOME</a>
 </div>
 @endsection
 
