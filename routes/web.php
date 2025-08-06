@@ -57,8 +57,16 @@ Route::get('/produk/detail/{slug}', function ($slug) {
 });
 
 Route::get('/keranjang', function () {
-    return view('produk.keranjang');
+    $dataKeranjang = [
+        [
+            'nama' => 'Cardigan Knitwear',
+            'jumlah' => 1,
+            'harga' => 258000
+        ],
+    ];
+    return view('produk.keranjang', compact('dataKeranjang'));
 })->name('keranjang');
+
 
 Route::get('/bayar', function () {
     return view('produk.bayar');

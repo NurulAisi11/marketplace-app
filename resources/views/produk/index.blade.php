@@ -7,6 +7,46 @@
 
 @section('content')
 
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand fw-bold text-primary" href="{{ url('/') }}">
+            Nazt Preloved
+        </a>
+
+        <!-- Toggle Button (Mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+            aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Menu -->
+        <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="{{ route('about') }}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('produk') ? 'active' : '' }}" href="{{ route('produk.index') }}">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('panduan') ? 'active' : '' }}" href="{{ route('panduan') }}">Guide</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary fw-semibold rounded-pill px-3 py-1 ms-lg-3"
+                        href="{{ route('struk') }}">
+                        Checkout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
 <!-- SEARCH & ICONS -->
 <div class="d-flex justify-content-between align-items-center mb-3">
     <input type="text" class="form-control me-2" placeholder="items and brands" style="max-width: 75%;">
