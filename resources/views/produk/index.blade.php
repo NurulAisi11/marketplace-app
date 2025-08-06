@@ -10,9 +10,14 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
     <div class="container">
         <!-- Brand -->
-        <a class="navbar-brand fw-bold text-primary" href="{{ url('/') }}">
+        <a class="navbar-brand fw-bold text-primary me-3" href="{{ url('/') }}">
             Nazt Preloved
         </a>
+
+        <!-- Search Bar -->
+        <form class="d-flex flex-grow-1 me-3" role="search">
+            <input class="form-control rounded-pill px-3" type="search" placeholder="Items and brands" aria-label="Search">
+        </form>
 
         <!-- Toggle Button (Mobile) -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
@@ -20,9 +25,9 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navbar Menu -->
+        <!-- Menu -->
         <div class="collapse navbar-collapse" id="navbarMain">
-            <ul class="navbar-nav ms-auto align-items-lg-center">
+            <ul class="navbar-nav align-items-lg-center ms-auto gap-lg-3">
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a>
                 </li>
@@ -36,10 +41,14 @@
                     <a class="nav-link {{ request()->is('panduan') ? 'active' : '' }}" href="{{ route('panduan') }}">Guide</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-primary fw-semibold rounded-pill px-3 py-1 ms-lg-3"
-                        href="{{ route('struk') }}">
+                    <a class="btn btn-primary fw-semibold rounded-pill px-3 py-1" href="{{ route('struk') }}">
                         Checkout
                     </a>
+                </li>
+                <li class="nav-item d-flex align-items-center gap-2 ms-lg-3">
+                    <a href="#"><i class="bi bi-camera fs-5"></i></a>
+                    <a href="#"><i class="bi bi-cart fs-5"></i></a>
+                    <a href="#"><i class="bi bi-bell fs-5"></i></a>
                 </li>
             </ul>
         </div>
@@ -47,15 +56,6 @@
 </nav>
 
 
-<!-- SEARCH & ICONS -->
-<div class="d-flex justify-content-between align-items-center mb-3">
-    <input type="text" class="form-control me-2" placeholder="items and brands" style="max-width: 75%;">
-    <div class="d-flex gap-2">
-        <button class="btn btn-light"><i class="bi bi-camera"></i></button>
-        <button class="btn btn-light"><i class="bi bi-cart"></i></button>
-        <button class="btn btn-light"><i class="bi bi-bell"></i></button>
-    </div>
-</div>
 
 <!-- Banner Carousel -->
 <div id="brandCarousel" class="carousel slide mb-4" data-bs-ride="carousel">

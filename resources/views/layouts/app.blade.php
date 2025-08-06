@@ -10,6 +10,47 @@
 
 <style>
 
+.navbar {
+    margin-bottom: 1rem; /* jarak 16px, bisa disesuaikan */
+}
+
+    /* Brand */
+    .navbar-brand {
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+    }
+
+    /* Link */
+    .nav-link {
+        color: #333 !important;
+        transition: color 0.2s ease-in-out;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+        color: #0d6efd !important;
+    }
+
+    /* Search */
+    .form-control {
+        border-radius: 20px;
+        border: 1px solid #ddd;
+    }
+    .form-control:focus {
+        box-shadow: none;
+        border-color: #0d6efd;
+    }
+
+    /* Ikon */
+    .bi {
+        color: #555;
+        transition: color 0.2s ease-in-out;
+    }
+    .bi:hover {
+        color: #0d6efd;
+    }
+
+
+
 .struk-wrapper {
     max-width: 480px;
     margin: auto;
@@ -365,11 +406,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-light">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Nazt Preloved</a>
-    </div>
-</nav>
+
 
 <div class="container my-4">
     @yield('content')

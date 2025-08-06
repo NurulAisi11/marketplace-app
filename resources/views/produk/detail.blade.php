@@ -5,7 +5,7 @@
 
 @section('content')
 <div class="container my-4">
-    <a href="{{ url('/') }}" class="text-decoration-none text-secondary mb-3 d-block">
+    <a href="{{ url('produk') }}" class="text-decoration-none text-secondary mb-3 d-block">
         ← Kembali
     </a>
 
