@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse" id="navbarMain">
             <ul class="navbar-nav align-items-lg-center ms-auto gap-lg-3">
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a>
+                    <a class="nav-link {{ request()->is('produk') ? 'active' : '' }}" href="{{ url('produk') }}">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="{{ route('about') }}">About</a>
@@ -39,6 +39,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('panduan') ? 'active' : '' }}" href="{{ route('panduan') }}">Guide</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link {{ request()->is('terms') ? 'active' : '' }}" href="{{ route('terms') }}">Tools</a>
                 </li>
                 <li class="nav-item">
                     <a class="btn btn-primary fw-semibold rounded-pill px-3 py-1" href="{{ route('struk') }}">
