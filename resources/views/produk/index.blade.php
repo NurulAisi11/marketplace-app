@@ -34,9 +34,7 @@
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="{{ route('about') }}">About</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->is('produk') ? 'active' : '' }}" href="{{ route('produk.index') }}">Products</a>
-                </li>
+               
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('panduan') ? 'active' : '' }}" href="{{ route('panduan') }}">Guide</a>
                 </li>
