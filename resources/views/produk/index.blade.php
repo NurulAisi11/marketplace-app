@@ -11,7 +11,7 @@
     <div class="container">
         <!-- Brand -->
         <a class="navbar-brand fw-bold text-primary me-3" href="{{ url('/') }}">
-            Naztt Preloved
+            Nazttttttt Preloved
         </a>
 
         <!-- Search Bar -->
